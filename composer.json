@@ -1,0 +1,13 @@
+{
+    "name": "made7/HRProject",
+    "description": "Tools for testing candidates",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HRProject\\": "src/HRProject"
+        }
+    }
+}
