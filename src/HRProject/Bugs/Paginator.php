@@ -12,9 +12,9 @@ class Paginator
     {
         $select->setLimit(null);
         $select->setOffset(null);
-        $select->setColumns(array('COUNT(*)'));
+        $select->setColumns(array('COUNT(*) as rate'));
         $db = new DbGateway();
 
         return $db->execute($select, \PDO::FETCH_COLUMN);
     }
-} 
+}  
