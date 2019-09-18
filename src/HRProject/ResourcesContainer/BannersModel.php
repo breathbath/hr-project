@@ -7,7 +7,7 @@ use HRProject\Bugs\Select;
 
 class BannersModel
 {
-    public function getList()
+    public function getList($list)
     {
         $select = new Select();
         $select->setFrom('banners');

@@ -6,10 +6,10 @@ class Banners extends CollectorCached {
     /**
      * @param Container $container
      */
-    public function collectDataForCache(Container $container)
+    public function collectDataForCache(Container $container, int $limit)
     {
         $model = new BannersModel();
-        $container->addResource('banners', $model->getList());
+        $container->addResource('banners', $model->getList($limit));
     }
 
     /**

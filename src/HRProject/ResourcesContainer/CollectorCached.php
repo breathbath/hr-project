@@ -6,7 +6,7 @@ abstract class CollectorCached implements Collector {
     /**
      * @param Container $container
      */
-    protected abstract function collectDataForCache(Container $container);
+    protected abstract function collectDataForCache(Container $container, $limit);
 
     /**
      * @return array
@@ -16,12 +16,12 @@ abstract class CollectorCached implements Collector {
     /**
      * @param Container $container
      */
-    public function collectTo(Container $container)
+    public function collectTo(Container $container, $limit)
     {
         if($this->isAlreadyCollected($container)){
             return;
         }
-        $this->collectDataForCache($container);
+        $this->collectDataForCache($container, $limit);
     }
 
     /**
